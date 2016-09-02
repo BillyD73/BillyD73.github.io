@@ -138,7 +138,7 @@ angular.module('app')
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
                 if ((response.headers!==null) && response.headers!==undefined)){
-                if (response.headers('link').indexOf("next") >= 0) { //This is apparently null with the other link - why
+                if (response.headers('link').indexOf("next") >= 0) { //This is apparently null with the other link - why TEST
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
                 }}
